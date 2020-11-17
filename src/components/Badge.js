@@ -4,8 +4,9 @@ import confLogo from '../images/confLogo.svg';
 
 class Badge extends React.Component {
   render() {
-    return  <div>
-      <div>
+    return (
+    <div className="Badge">
+      <div className="Badge__header">
         <img src={confLogo} alt="Logo de la conferencia"/>
       </div>
       <div>
@@ -19,7 +20,7 @@ class Badge extends React.Component {
       <div>
         #platziconf
       </div>
-    </div>;
+    </div>);
   }
 }
 
