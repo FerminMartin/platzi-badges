@@ -8,8 +8,8 @@ class Navbar extends React.Component {
       <div>
         <a href="/">
           <img src={confLogo} alt="Logo" />
-          <span className="">Platzi</span>
-          <span>Conf</span>
+          <span className="font-weight-light">Platzi</span>
+          <span className="font-weight-bold">Conf</span>
         </a>
       </div>
     );
