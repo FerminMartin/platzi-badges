@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './styles/Badge.css'
 import confLogo from '../images/confLogo.svg';
 
 class Badge extends React.Component {
@@ -9,15 +10,16 @@ class Badge extends React.Component {
       <div className="Badge__header">
         <img src={confLogo} alt="Logo de la conferencia"/>
       </div>
-      <div>
-        <img src="https://www.gravatar.com/avatar?d=identicon" alt="Avatar"/>
-        <h1>Richard <br/> Kauffman</h1>
+      <div className="Badge__section-name">
+        <img className="Badge__avatar" src="https://s.gravatar.com/avatar/930f34bb64181c4cfc8a72d264fc90be?s=80
+" alt="Avatar"/>
+        <h1 className="">Fermin <br/> Martin</h1>
       </div>
-      <div>
+      <div className="Badge__section-info">
         <p>Frontend Engineer</p>
-        <p>@asparragus</p>
+        <p>@fermartorr</p>
       </div>
-      <div>
+      <div className="Badge__footer">
         #platziconf
       </div>
     </div>);
