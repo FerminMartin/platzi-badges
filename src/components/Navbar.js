@@ -6,11 +6,13 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className="Navbar">
-        <a href="/">
-          <img src={confLogo} alt="Logo" />
-          <span className="font-weight-light">Platzi</span>
-          <span className="font-weight-bold">Conf</span>
-        </a>
+        <div className="container-fluid">
+          <a href="/">
+            <img src={confLogo} alt="Logo" />
+            <span className="font-weight-light">Platzi</span>
+            <span className="font-weight-bold">Conf</span>
+          </a>
+        </div>
       </div>
     );
   }
