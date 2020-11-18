@@ -7,7 +7,13 @@ import BadgeForm from '../components/BadgeForm';
 import Badge from '../components/Badge';
 
 class BadgeNew extends React.Component {
-  state = { form: {} };
+  state = { form: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    jobTitle: '',
+    twitter: '',
+  } };
 
   handleChange = e => {
     this.setState({
