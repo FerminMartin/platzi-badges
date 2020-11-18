@@ -7,7 +7,7 @@ class BadgeForm extends React.Component {
     //   value: e.target.value,
     // });
     this.setState({
-      firstName: e.target.value,
+      [e.target.name]: e.target.value,
     })
   };
 
@@ -28,8 +28,49 @@ class BadgeForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>First Name</label>
-            <input onChange={this.handleChange} className="form-control" type="text" name="firstName"/>
+            <input 
+            onChange={this.handleChange} 
+            className="form-control" 
+            type="text" 
+            name="firstName"/>
           </div>
+
+          <div className="form-group">
+            <label>Last Name</label>
+            <input 
+            onChange={this.handleChange} 
+            className="form-control" 
+            type="text" 
+            name="lastName"/>
+          </div>
+
+          <div className="form-group">
+            <label>Email</label>
+            <input 
+            onChange={this.handleChange} 
+            className="form-control" 
+            type="email" 
+            name="email"/>
+          </div>
+
+          <div className="form-group">
+            <label>Job Title</label>
+            <input 
+            onChange={this.handleChange} 
+            className="form-control" 
+            type="text" 
+            name="jobTitle"/>
+          </div>
+
+          <div className="form-group">
+            <label>Twitter</label>
+            <input 
+            onChange={this.handleChange} 
+            className="form-control" 
+            type="text" 
+            name="twitter"/>
+          </div>
+
           <button onClick={this.handleClick} className="btn btn-primary">Save</button>
         </form>
       </div>
