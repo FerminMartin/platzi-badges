@@ -36,10 +36,11 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge 
-                firstName="Fermin" 
-                lastName="Martin" 
-                twitter="fermartorr" 
-                jobTitle="Frontend Engineer" 
+                firstName={this.state.form.firstName} 
+                lastName={this.state.form.lastName}
+                twitter={this.state.form.twitter}
+                jobTitle={this.state.form.jobTitle}
+                email={this.state.form.email}
                 avatarUrl="https://s.gravatar.com/avatar/930f34bb64181c4cfc8a72d264fc90be?s=80"
               />
             </div>
