@@ -10,9 +10,6 @@ class BadgeNew extends React.Component {
   state = { form: {} };
 
   handleChange = e => {
-    // const nextForm = this.state.form;
-    // nextForm[e.target.name] = e.target.value;
-
     this.setState({
         form: {
           ... this.state.form,
@@ -41,7 +38,10 @@ class BadgeNew extends React.Component {
               />
             </div>
             <div className="col-6">
-              <BadgeForm onChange={this.handleChange}/>
+              <BadgeForm 
+                onChange={this.handleChange} 
+                formValues={this.state.form} 
+              />
             </div>
           </div>
         </div>
