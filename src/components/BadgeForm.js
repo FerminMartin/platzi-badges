@@ -1,7 +1,9 @@
 import React from 'react';
 
 class BadgeForm extends React.Component {
-  state = {};
+  state = {
+    jobTitle: 'Designer',
+  };
   handleChange = (e) => {
     // console.log({
     //   name: e.target.name,
@@ -19,6 +21,7 @@ class BadgeForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form was submitted');
+    console.log(this.state);
   };
 
   render() {
