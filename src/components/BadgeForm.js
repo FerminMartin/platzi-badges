@@ -1,11 +1,14 @@
 import React from 'react';
 
 class BadgeForm extends React.Component {
-Eventol  handleChange = (e) => {
-    console.log({
-      name: e.target.name,
-      value: e.target.value,
-    });
+  handleChange = (e) => {
+    // console.log({
+    //   name: e.target.name,
+    //   value: e.target.value,
+    // });
+    this.setState({
+      firstName: e.target.value,
+    })
   };
 
   handleClick = (e) => {
