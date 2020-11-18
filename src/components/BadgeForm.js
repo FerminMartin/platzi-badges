@@ -6,11 +6,12 @@ class BadgeForm extends React.Component {
       <div>
         <h1>New Attendat</h1>
 
-        <form></form>
+        <form>
           <div className="form-group">
             <label>First Name</label>
             <input className="form-control" type="text" name="firstName"/>
           </div>
+          <button className="btn btn-primary">Save</button>
         </form>
       </div>
     );
