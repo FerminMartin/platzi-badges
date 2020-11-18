@@ -46,7 +46,7 @@ class Badges extends React.Component {
         <div className="Badges">
           <div className="Badges__hero">
             <div className="Badges__container">
-              <img classNAme="Badges_conf-logo" src={confLogo} alt="Conf Logo"/>
+              <img className="Badges_conf-logo" src={confLogo} alt="Conf Logo"/>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ class Badges extends React.Component {
               <ul className="list-unstyled">
                 {this.state.data.map((badge) =>{
                   return (
-                    <li>
+                    <li key={badge.id}>
                       <p>{badge.firstName} {badge.lastName} </p>
                     </li>
                   )
