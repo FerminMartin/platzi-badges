@@ -4,10 +4,10 @@ import Navbar from './Navbar';
 function Layout (props) {
     // const children = props.children;
     return (
-      <div>
+      <React.Fragment>
         <Navbar />
         {props.children}
-      </div>
+      </React.Fragment>
       );
 }
 
