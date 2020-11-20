@@ -18,7 +18,7 @@ class Badges extends React.Component {
   componentDidMount() {
   console.log('3. componentDidMount()');
 
-  setTimeout(() => {
+  this.timeoutId = setTimeout(() => {
     this.setState({
       data: [
         {
@@ -64,6 +64,11 @@ class Badges extends React.Component {
       props: this.props, 
       state: this.state,
     });
+  }
+
+  componentWillUnmount() {
+    console.log('6. componentWillUnmount');
+    clearTimeout(this.timeoutId);
   }
   
   render() {
