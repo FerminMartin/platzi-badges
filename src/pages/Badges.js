@@ -1,4 +1,4 @@
-import React from 'react';
+rreimport React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/Badges.css';
@@ -11,6 +11,15 @@ class Badges extends React.Component {
     console.log('1. constructor()');
 
     this.state = {
+      data: [],
+    };
+  }
+  
+  componentDidMount() {
+  console.log('3. componentDidMount()');
+
+  setTimeout(() => {
+    this.setState({
       data: [
         {
           id: "2de30c42-9deb-40fc-a41f-05e62b5939a7",
@@ -38,13 +47,10 @@ class Badges extends React.Component {
           jobTitle: "National Markets Officer",
           twitter: "DaphneyTorphy96105",
           avatarUrl: "https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
-        }
-      ]
-    }
-  }
-  
-  componentDidMount() {
-  console.log('3. componentDidMount()');
+        },
+      ],
+    });
+  }, 3000);
   }
   
   render() {
