@@ -52,9 +52,22 @@ class Badges extends React.Component {
     });
   }, 3000);
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('5. componentDidUpdate()');
+    console.log({
+      prevPros: prevProps, 
+      prevState: prevState
+    });
+
+    console.log({
+      props: this.props, 
+      state: this.state,
+    });
+  }
   
   render() {
-    console.log('2. render()');
+    console.log('2/4. render()');
     return (
       <React.Fragment>
         <div className="Badges">
