@@ -4,16 +4,21 @@ import './styles/BadgeNew.css';
 import header from '../images/platziconf-logo.svg';
 import BadgeForm from '../components/BadgeForm';
 import Badge from '../components/Badge';
+import PageLoading from '../components/PageLoading';
 import api from '../api';
 
 class BadgeNew extends React.Component {
-  state = { form: {
-    firstName: '',
-    lastName: '',
-    email: '',
-    jobTitle: '',
-    twitter: '',
-  } };
+  state = { 
+    loading: false,
+    error: null,
+    form: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      jobTitle: '',
+      twitter: '',
+    }, 
+  };
 
   handleChange = e => {
     this.setState({
@@ -37,6 +42,10 @@ class BadgeNew extends React.Component {
   }
 
   render() {
+    if (this.state.loading) {
+      return <PageLoading />;
+    }
+
     return (
       <React.Fragment>
         <div className="BadgeNew__hero">
