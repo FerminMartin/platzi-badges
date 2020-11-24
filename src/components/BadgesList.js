@@ -6,11 +6,27 @@ import './styles/BadgesList.css';
 function BadgesList (props) {
   const badges = props.badges;
 
-  const [ query, setQuery ] = React.useState('')
+  const [ query, setQuery ] = React.useState('');
 
-    if(badges.length === 0) {
+  const filteredBadges = badges.filter(badge => {
+    return badge.firstName.includes(query);
+  });
+
+    if(filteredBadges.length === 0) {
       return (
         <div>
+          <div className="form-group">
+            <label>Filter Badges</label>
+            <input 
+              type="text" 
+              className="form-control" 
+              value={query} 
+              onChange={(e) => {
+                setQuery(e.target.value);
+              }}
+            />
+          </div>
+
           <h3>No badges were found</h3>
           <Link className="btn btn-primary" to="badges/new">
             Create new badge
@@ -33,7 +49,7 @@ function BadgesList (props) {
         </div>
 
         <ul className="list-unstyled BadgesList">
-          {badges.map((badge) =>{
+          {filteredBadges.map((badge) =>{
             return (
               <li key={badge.id} className="BadgesListItem">
                 <Link className="text-reset text-decoration-none BadgesListItem-display" to={`/badges/${badge.id}`}>
