@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
 import './styles/BadgeDetails.css';
 import confLogo from '../images/platziconf-logo.svg';
 import Badge from '../components/Badge';
+import Modal from '../components/Modal';
 
 
 function BadgeDetails (props) {
@@ -52,10 +52,7 @@ function BadgeDetails (props) {
 
               <div>
                 <button className="btn btn-danger">Delete</button>
-                {ReactDOM.createPortal(
-                  <h1>Hola, realmente no estoy aquí</h1>, 
-                  document.getElementById('modal')
-                )}
+                  <Modal />
               </div>
             </div>
           </div>
