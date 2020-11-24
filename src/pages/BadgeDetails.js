@@ -51,8 +51,8 @@ function BadgeDetails (props) {
               </div>
 
               <div>
-                <button className="btn btn-danger">Delete</button>
-                <Modal isOpen={true} >Lorem, ipsum.</Modal>
+                <button onClick={props.onOpenModal} className="btn btn-danger">Delete</button>
+                <Modal isOpen={props.modalIsOpen} onClose={props.onCloseModal} >Lorem, ipsum.</Modal>
               </div>
             </div>
           </div>
