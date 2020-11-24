@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import Gravatar from '../components/Gravatar';
 
 import './styles/BadgesList.css';
-class BadgesList extends React.Component {
-  render() {
-    if(this.props.badges.length === 0) {
+function BadgesList (props) {
+  const badges = props.badges;
+    if(badges.length === 0) {
       return (
         <div>
           <h3>No badges were found</h3>
@@ -13,12 +13,12 @@ class BadgesList extends React.Component {
             Create new badge
           </Link>
         </div>
-      )
+      );
     }
     return (
       <div className="BadgesList">
         <ul className="list-unstyled BadgesList">
-          {this.props.badges.map((badge) =>{
+          {badges.map((badge) =>{
             return (
               <li key={badge.id} className="BadgesListItem">
                 <Link className="text-reset text-decoration-none BadgesListItem-display" to={`/badges/${badge.id}`}>
@@ -38,6 +38,5 @@ class BadgesList extends React.Component {
       </div>  
     );
   }
-}
 
 export default BadgesList;
