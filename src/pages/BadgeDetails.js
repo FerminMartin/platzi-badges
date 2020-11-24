@@ -55,6 +55,7 @@ function BadgeDetails (props) {
                 <DeleteBadgeModal 
                   isOpen={props.modalIsOpen} 
                   onClose={props.onCloseModal} 
+                  onDeleteBadge={props.onDeleteBadge} 
                 />
               </div>
             </div>
