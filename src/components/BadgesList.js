@@ -5,6 +5,9 @@ import Gravatar from '../components/Gravatar';
 import './styles/BadgesList.css';
 function BadgesList (props) {
   const badges = props.badges;
+
+  const [ query, setQuery ] = React.useState('')
+
     if(badges.length === 0) {
       return (
         <div>
@@ -19,9 +22,16 @@ function BadgesList (props) {
       <div className="BadgesList">
         <div className="form-group">
           <label>Filter Badges</label>
-          <input type="text" className="form-control" />
+          <input 
+            type="text" 
+            className="form-control" 
+            value={query} 
+            onChange={(e) => {
+              setQuery(e.target.value);
+            }}
+          />
         </div>
-        
+
         <ul className="list-unstyled BadgesList">
           {badges.map((badge) =>{
             return (
