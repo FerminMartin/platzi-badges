@@ -3,9 +3,8 @@ import {Link} from 'react-router-dom';
 import Gravatar from '../components/Gravatar';
 
 import './styles/BadgesList.css';
-function BadgesList (props) {
-  const badges = props.badges;
 
+function useSearchBadges(badges) {
   const [ query, setQuery ] = React.useState('');
   const [ filteredBadges, setFilteredBadges ] = React.useState(badges);
 
@@ -18,6 +17,14 @@ function BadgesList (props) {
 
     setFilteredBadges(result)
   }, [badges, query]);
+
+  return { query, setQuery, filteredBadges }
+}
+
+function BadgesList (props) {
+  const badges = props.badges;
+
+  const { query, setQuery, filteredBadges } = useSearchBadges(badges);
 
     if(filteredBadges.length === 0) {
       return (
