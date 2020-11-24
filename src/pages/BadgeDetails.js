@@ -8,7 +8,8 @@ import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
 
 function BadgeDetails (props) {
-  const count = 3;
+  const [ count, setCount ] = React.useState(0);
+
   const badge = props.badge;
 
   return (
@@ -42,8 +43,10 @@ function BadgeDetails (props) {
           <div className="col">
             <h2>Actions</h2>
             <div>
-              <div></div>
-                <button onClick={() =>{}} className="btn btn-primary mr-4">
+              <div>
+                <button onClick={() =>{
+                  setCount(count + 1)
+                }} className="btn btn-primary mr-4">
                   Increase Count: {count}
                 </button>
 
@@ -68,7 +71,7 @@ function BadgeDetails (props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default BadgeDetails;
