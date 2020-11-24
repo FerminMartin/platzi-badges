@@ -8,6 +8,7 @@ import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
 
 function BadgeDetails (props) {
+  const count = 3;
   const badge = props.badge;
 
   return (
@@ -41,7 +42,11 @@ function BadgeDetails (props) {
           <div className="col">
             <h2>Actions</h2>
             <div>
-              <div>
+              <div></div>
+                <button onClick={() =>{}} className="btn btn-primary mr-4">
+                  Increase Count: {count}
+                </button>
+
                 <Link
                   className="btn btn-primary mb-4"
                   to={`/badges/${badge.id}/edit`}
