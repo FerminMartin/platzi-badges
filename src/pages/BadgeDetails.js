@@ -52,7 +52,7 @@ function BadgeDetails (props) {
 
               <div>
                 <button className="btn btn-danger">Delete</button>
-                  <Modal isOpen={true} />
+                <Modal isOpen={true} >Lorem, ipsum.</Modal>
               </div>
             </div>
           </div>
