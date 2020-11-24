@@ -17,6 +17,11 @@ function BadgesList (props) {
     }
     return (
       <div className="BadgesList">
+        <div className="form-group">
+          <label>Filter Badges</label>
+          <input type="text" className="form-control" />
+        </div>
+        
         <ul className="list-unstyled BadgesList">
           {badges.map((badge) =>{
             return (
